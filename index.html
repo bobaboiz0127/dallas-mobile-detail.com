@@ -7,7 +7,7 @@
   <meta name="description" content="Premium mobile car detailing in Dallas, TX. Interior, exterior, full detail packages. We come to your home or office. Call/text to book." />
   <meta name="theme-color" content="#0b0f1a" />
 
-  <!-- Open Graph (nice link preview) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Dallas Mobile Car Detailing | We Come To You" />
   <meta property="og:description" content="Premium mobile detailing in Dallas, TX. Easy booking. Fast turnaround. Showroom results." />
   <meta property="og:type" content="website" />
@@ -20,35 +20,15 @@
     "@context":"https://schema.org",
     "@type":"AutoRepair",
     "name":"Dallas Mobile Detail",
-    "areaServed":["Dallas, TX","Plano, TX","Richardson, TX","Garland, TX","Irving, TX","Addison, TX"],
+    "areaServed":["Dallas, TX","Plano, TX","Richardson, TX","Garland, TX","Irving, TX","Addison, TX","Carrollton, TX"],
     "address":{"@type":"PostalAddress","addressLocality":"Dallas","addressRegion":"TX","addressCountry":"US"},
     "telephone":"+1-214-555-1234",
-    "url":"https://YOURUSERNAME.github.io/dallas-mobile-detail/",
-    "image":"https://YOURUSERNAME.github.io/dallas-mobile-detail/assets/hero.jpg",
+    "url":"https://bobaboi0127.github.io/dallas-mobile-detail.com/",
     "priceRange":"$$",
     "serviceType":["Mobile Car Detailing","Interior Detailing","Exterior Detailing","Full Detail","Ceramic Coating"]
   }
   </script>
 </head>
-<!-- Chatbot (required on every page) -->
-<button class="chatFab" id="chatFab" aria-label="Open chat">💬</button>
-
-<div class="chatWidget" id="chatWidget" aria-hidden="true">
-  <div class="chatHeader">
-    <div>
-      <strong>DetailBot</strong>
-      <span>Quick answers</span>
-    </div>
-    <button class="chatClose" id="chatClose" aria-label="Close chat">✕</button>
-  </div>
-
-  <div class="chatBody" id="chatBody"></div>
-
-  <form class="chatForm" id="chatForm">
-    <input id="chatInput" placeholder="Ask about pricing, service area, booking..." autocomplete="off" />
-    <button type="submit">Send</button>
-  </form>
-</div>
 
 <body>
   <!-- Top Bar -->
@@ -62,9 +42,9 @@
       <nav class="nav">
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact" class="btn btn--small">Book Now</a>
+        <a href="#gallery">Highlights</a>
+        <a href="#contact">Book</a>
+        <a href="project.html" class="btn btn--small">Project</a>
       </nav>
 
       <button class="menu" aria-label="Open menu" id="menuBtn">☰</button>
@@ -77,9 +57,9 @@
       <button class="mobileNav__close" id="closeBtn" aria-label="Close menu">✕</button>
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#reviews">Reviews</a>
+      <a href="#gallery">Highlights</a>
       <a href="#contact" class="btn">Book Now</a>
+      <a href="project.html" class="btn btn--ghost">Project Page</a>
       <a class="btn btn--ghost" href="tel:+12145551234">Call: (214) 555-1234</a>
     </div>
   </div>
@@ -98,12 +78,21 @@
         <div class="hero__cta">
           <a class="btn" href="#contact">Get a Quote / Book</a>
           <a class="btn btn--ghost" href="tel:+12145551234">Call / Text (214) 555-1234</a>
+          <a class="btn btn--ghost" href="project.html">Open Project Page</a>
         </div>
 
         <div class="hero__badges">
           <div class="badge">✅ Same-week appointments</div>
           <div class="badge">✅ Upfront pricing</div>
           <div class="badge">✅ Insured & professional</div>
+        </div>
+
+        <!-- Rubric #1 + #2: AI-generated video on landing page, autoplay loop -->
+        <div class="hero__media">
+          <div class="pill">AI-generated concept video • auto-plays on a loop</div>
+          <video id="conceptVideo" class="conceptVid" autoplay muted loop playsinline preload="auto">
+            <source src="assets/videos/Gen-4%20Turbo%20car%20detaling%201114642812.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
 
@@ -122,11 +111,11 @@
             <span>Clear & simple</span>
           </a>
           <a class="quick" href="#gallery">
-            See Results
-            <span>Before/after</span>
+            See Highlights
+            <span>Looping clips</span>
           </a>
         </div>
-        <div class="hero__note">Tip: Add your Google reviews link here once you have it.</div>
+        <div class="hero__note">Tip: Add your Google Reviews link once you have it.</div>
       </div>
     </div>
   </main>
@@ -231,45 +220,118 @@
       </div>
 
       <p class="fineprint">* Ask about fleets, ceramic coatings, and monthly maintenance plans.</p>
+
+      <!-- Rubric #5 (X-Factor): Instant Estimate -->
+      <div class="section__head" style="margin-top:26px;">
+        <h2>Instant Estimate</h2>
+        <p>Choose your vehicle and add-ons to see an estimated range instantly.</p>
+      </div>
+
+      <div class="estGrid">
+        <article class="card">
+          <h3>Build your estimate</h3>
+
+          <div class="estForm">
+            <label class="estLabel">
+              Vehicle size
+              <select id="estVehicle" class="estSelect">
+                <option value="sedan">Sedan / Coupe</option>
+                <option value="suv">SUV / Crossover</option>
+                <option value="truck">Truck / Large SUV</option>
+              </select>
+            </label>
+
+            <label class="estLabel">
+              Package
+              <select id="estPackage" class="estSelect">
+                <option value="exterior">Exterior Refresh</option>
+                <option value="interior">Interior Reset</option>
+                <option value="full" selected>Full Detail</option>
+              </select>
+            </label>
+
+            <div class="estAddons">
+              <div class="estAddonsTitle">Add-ons</div>
+
+              <label class="estCheck">
+                <input type="checkbox" id="addonPetHair" />
+                Pet hair removal
+              </label>
+
+              <label class="estCheck">
+                <input type="checkbox" id="addonExtract" />
+                Shampoo / extraction
+              </label>
+
+              <label class="estCheck">
+                <input type="checkbox" id="addonOdor" />
+                Odor treatment
+              </label>
+            </div>
+
+            <div class="ctaRow">
+              <a class="btn" href="#contact">Book with this estimate</a>
+              <a class="btn btn--ghost" href="sms:+12145551234?&body=Hi!%20I%20used%20your%20Instant%20Estimate.%20Vehicle:%20____%20Package:%20____%20Add-ons:%20____%20Preferred%20time:%20____">
+                Text this estimate
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Your range</h3>
+          <p class="muted">
+            This is a quick estimate. We confirm final pricing after a quick look at condition.
+          </p>
+          <div class="estPrice" id="estPrice">$179–$229</div>
+          <div class="estNotes" id="estNotes">Full Detail • Sedan/Coupe</div>
+        </article>
+      </div>
     </div>
   </section>
 
-  <!-- Gallery -->
- <section id="gallery" class="section">
-  <div class="container">
-    <div class="section__head">
-     <h2>Work Highlights</h2>
-    </div>
+  <!-- Video Highlights -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Detailing In Motion</h2>
+        <p>6 short clips running continuously (muted by default). Click a clip to toggle sound.</p>
+      </div>
 
-    <div class="videoWall">
-  <video class="autoVid" autoplay muted loop playsinline preload="metadata">
-    <source src="assets/videos/clip1.mp4" type="video/mp4" />
-  </video>
-  <video class="autoVid" autoplay muted loop playsinline preload="metadata">
-    <source src="assets/videos/clip2.mp4" type="video/mp4" />
-  </video>
-  <video class="autoVid" autoplay muted loop playsinline preload="metadata">
-    <source src="assets/videos/clip3.mp4" type="video/mp4" />
-  </video>
-  <video class="autoVid" autoplay muted loop playsinline preload="metadata">
-    <source src="assets/videos/clip4.mp4" type="video/mp4" />
-  </video>
-  <video class="autoVid" autoplay muted loop playsinline preload="metadata">
-    <source src="assets/videos/clip5.mp4" type="video/mp4" />
-  </video>
-  <video class="autoVid" autoplay muted loop playsinline preload="metadata">
-    <source src="assets/videos/clip6.mp4" type="video/mp4" />
-      </video>
+      <div class="videoWall">
+        <video class="autoVid" autoplay muted loop playsinline preload="metadata">
+          <source src="assets/videos/Gen-4%20Turbo%20car%20detaling%201114642812.mp4" type="video/mp4" />
+        </video>
+
+        <video class="autoVid" autoplay muted loop playsinline preload="metadata">
+          <source src="assets/videos/Gen-4%20Turbo%20car%20detaling%202401986422.mp4" type="video/mp4" />
+        </video>
+
+        <video class="autoVid" autoplay muted loop playsinline preload="metadata">
+          <source src="assets/videos/Gen-4%20Turbo%20car%20detaling%203000967691.mp4" type="video/mp4" />
+        </video>
+
+        <video class="autoVid" autoplay muted loop playsinline preload="metadata">
+          <source src="assets/videos/Gen-4%20Turbo%20sport%20car%20detailing%202914270214.mp4" type="video/mp4" />
+        </video>
+
+        <video class="autoVid" autoplay muted loop playsinline preload="metadata">
+          <source src="assets/videos/Gen-4%20Turbo%20sport%20car%20detailing%203365181608.mp4" type="video/mp4" />
+        </video>
+
+        <video class="autoVid" autoplay muted loop playsinline preload="metadata">
+          <source src="assets/videos/Gen-4%20Turbo%20sport%20car%20detailing%20592901231.mp4" type="video/mp4" />
+        </video>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Reviews -->
   <section id="reviews" class="section section--alt">
     <div class="container">
       <div class="section__head">
         <h2>What customers say</h2>
-        <p>Replace these with your real reviews (Google is best).</p>
+        <p>Replace these with real reviews (Google is best).</p>
       </div>
 
       <div class="cards">
@@ -284,6 +346,10 @@
         <article class="card">
           <p>“They removed pet hair I couldn’t get out for months.”</p>
           <strong>— David, Richardson</strong>
+        </article>
+        <article class="card">
+          <p>“The paint shine is insane. My car looks like it just left the dealership.”</p>
+          <strong>— Alana, Addison</strong>
         </article>
       </div>
     </div>
@@ -302,17 +368,50 @@
 
       <div>
         <h2>FAQ</h2>
+
         <details>
           <summary>Do you bring water & power?</summary>
-          <p>Put your real answer here (many mobile detailers bring water; power depends on setup).</p>
+          <p>Yes. We bring our own water and supplies. If power is needed, we can use a portable setup or a standard outlet (we’ll confirm before arrival).</p>
         </details>
+
         <details>
-          <summary>How long does it take?</summary>
-          <p>Exterior: ~1–2 hrs • Interior: ~1–2.5 hrs • Full detail: ~3–5 hrs (varies by condition).</p>
+          <summary>How long does a detail take?</summary>
+          <p>Exterior: ~1–2 hrs • Interior: ~1–2.5 hrs • Full detail: ~3–5 hrs. Time depends on vehicle size and condition.</p>
         </details>
+
+        <details>
+          <summary>What areas do you serve?</summary>
+          <p>Dallas and nearby areas like Plano, Richardson, Garland, Irving, Addison, and Carrollton. If you’re slightly outside, message us—we may still come out.</p>
+        </details>
+
         <details>
           <summary>What should I do before you arrive?</summary>
-          <p>Remove personal items if possible. We’ll handle the rest.</p>
+          <p>Please unlock the vehicle and remove valuables/personal items if possible. We can work in driveways, office lots, or apartment parking (as allowed).</p>
+        </details>
+
+        <details>
+          <summary>Do you remove pet hair, stains, or odors?</summary>
+          <p>Yes—pet hair removal, shampoo/extraction, and odor treatments are available as add-ons. We’ll recommend the best option after a quick look.</p>
+        </details>
+
+        <details>
+          <summary>What if it rains or the weather is bad?</summary>
+          <p>We can reschedule if needed. If light rain is expected, we’ll message you ahead of time to confirm the best plan.</p>
+        </details>
+
+        <details>
+          <summary>How do I pay?</summary>
+          <p>We accept cash, card, and popular payment apps. We confirm pricing before we start—no surprise charges.</p>
+        </details>
+
+        <details>
+          <summary>Do you do ceramic coating or paint correction?</summary>
+          <p>Yes—those are quoted because paint condition varies. Send photos (or book an inspection) and we’ll provide a recommendation and price range.</p>
+        </details>
+
+        <details>
+          <summary>Do you offer maintenance plans?</summary>
+          <p>Yes—weekly/biweekly/monthly maintenance is available. It’s the easiest way to keep your car consistently clean.</p>
         </details>
       </div>
     </div>
@@ -327,7 +426,7 @@
 
         <div class="ctaRow">
           <a class="btn" href="tel:+12145551234">Call (214) 555-1234</a>
-          <a class="btn btn--ghost" href="sms:+12145551234?&body=Hi!%20I%27d%20like%20a%20quote.%20Vehicle:%20____%20Location:%20____%20Service:%20____">Text for quote</a>
+          <a class="btn btn--ghost" href="sms:+12145551234?&body=Hi!%20I%27d%20like%20a%20quote.%20Vehicle:%20____%20Location:%20____%20Service:%20____%20Preferred%20time:%20____">Text for quote</a>
         </div>
 
         <p class="fineprint">Hours: Mon–Sun • 9am–7pm (edit this)</p>
@@ -360,6 +459,11 @@
         </p>
       </form>
     </div>
+
+    <!-- Rubric #5 description (<50 words) -->
+    <div class="container xfactor">
+      <strong>X-Factor:</strong> Instant Estimate updates a price range in real time based on your vehicle size, package, and add-ons, so you can book confidently in seconds.
+    </div>
   </section>
 
   <footer class="footer">
@@ -369,6 +473,7 @@
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
         <a href="#contact">Book</a>
+        <a href="project.html">Project</a>
       </div>
     </div>
   </footer>
@@ -379,7 +484,26 @@
     <a class="stickyCta__btn stickyCta__btn--primary" href="#contact">Book</a>
   </div>
 
+  <!-- Chatbot (Rubric #4: on landing + secondary page) -->
+  <button class="chatFab" id="chatFab" aria-label="Open chat">💬</button>
+
+  <div class="chatWidget" id="chatWidget" aria-hidden="true">
+    <div class="chatHeader">
+      <div>
+        <strong>DetailBot</strong>
+        <span>Quick answers</span>
+      </div>
+      <button class="chatClose" id="chatClose" aria-label="Close chat">✕</button>
+    </div>
+
+    <div class="chatBody" id="chatBody"></div>
+
+    <form class="chatForm" id="chatForm">
+      <input id="chatInput" placeholder="Ask about pricing, service area, booking..." autocomplete="off" />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
-
