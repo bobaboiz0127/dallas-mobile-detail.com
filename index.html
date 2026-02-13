@@ -30,6 +30,25 @@
   }
   </script>
 </head>
+<!-- Chatbot (required on every page) -->
+<button class="chatFab" id="chatFab" aria-label="Open chat">💬</button>
+
+<div class="chatWidget" id="chatWidget" aria-hidden="true">
+  <div class="chatHeader">
+    <div>
+      <strong>DetailBot</strong>
+      <span>Quick answers</span>
+    </div>
+    <button class="chatClose" id="chatClose" aria-label="Close chat">✕</button>
+  </div>
+
+  <div class="chatBody" id="chatBody"></div>
+
+  <form class="chatForm" id="chatForm">
+    <input id="chatInput" placeholder="Ask about pricing, service area, booking..." autocomplete="off" />
+    <button type="submit">Send</button>
+  </form>
+</div>
 
 <body>
   <!-- Top Bar -->
