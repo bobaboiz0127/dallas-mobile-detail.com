@@ -1,1 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project Page | Dallas Mobile Detail</title>
+  <meta name="description" content="Project details for the Dallas Mobile Detail website: concept, workflow, and rubric features." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="top">
+  <div class="container top__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark">◆</span>
+      <span class="brand__text">Dallas Mobile Detail</span>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#gallery">Highlights</a>
+      <a href="index.html#contact">Book</a>
+      <a href="project.html" class="btn btn--small">Project</a>
+    </nav>
+
+    <button class="menu" aria-label="Open menu" id="menuBtn">☰</button>
+  </div>
+</header>
+
+<div class="mobileNav" id="mobileNav" aria-hidden="true">
+  <div class="mobileNav__panel">
+    <button class="mobileNav__close" id="closeBtn" aria-label="Close menu">✕</button>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="index.html#gallery">Highlights</a>
+    <a href="index.html#contact" class="btn">Book Now</a>
+    <a href="index.html" class="btn btn--ghost">Home</a>
+  </div>
+</div>
+
+<main class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2>Project Overview</h2>
+      <p>
+        This page provides additional details about the website build: the business concept, feature requirements,
+        and how the user experience is designed for fast booking.
+      </p>
+    </div>
+
+    <div class="cards projectGrid">
+      <article class="card">
+        <h3>Business Concept</h3>
+        <p>
+          Dallas Mobile Detail offers on-demand mobile detailing at home or office. Customers choose a package,
+          request add-ons, and book quickly through call/text or the form.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>AI Video + Seamless Playback</h3>
+        <p>
+          The landing page includes an AI-generated 5-second concept video set to autoplay and loop immediately.
+          A separate “Detailing In Motion” section shows multiple looping clips for visual proof.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Multi-Page Navigation</h3>
+        <p>
+          The site includes a second page (this page) linked from the main navigation and hero CTA. It provides
+          more detail than a short blurb, meeting the rubric’s multi-page requirement.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Chatbot (Both Pages)</h3>
+        <p>
+          A functional chatbot (DetailBot) appears on both pages. It answers common questions about pricing,
+          booking, service areas, timing, and add-ons.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>X-Factor Feature</h3>
+        <p>
+          The “Instant Estimate” tool updates a price range in real time based on vehicle size, package,
+          and selected add-ons—helping customers decide faster before booking.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>What I’d Improve Next</h3>
+        <ul>
+          <li>Add real before/after photos and Google Reviews link</li>
+          <li>Swap the contact form for a booking system (Calendly/Square)</li>
+          <li>Compress videos for faster loading on mobile</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="ctaRow" style="margin-top:18px;">
+      <a class="btn" href="index.html#contact">Book Now</a>
+      <a class="btn btn--ghost" href="index.html">Back to Home</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>© <span id="year"></span> Dallas Mobile Detail • Dallas, TX</div>
+    <div class="footer__links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#contact">Book</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Chatbot (Rubric #4) -->
+<button class="chatFab" id="chatFab" aria-label="Open chat">💬</button>
+
+<div class="chatWidget" id="chatWidget" aria-hidden="true">
+  <div class="chatHeader">
+    <div>
+      <strong>DetailBot</strong>
+      <span>Quick answers</span>
+    </div>
+    <button class="chatClose" id="chatClose" aria-label="Close chat">✕</button>
+  </div>
+
+  <div class="chatBody" id="chatBody"></div>
+
+  <form class="chatForm" id="chatForm">
+    <input id="chatInput" placeholder="Ask about pricing, service area, booking..." autocomplete="off" />
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
 
