@@ -25,4 +25,18 @@ mobileNav?.addEventListener("click", (e) => {
 mobileNav?.querySelectorAll("a").forEach(a => {
   a.addEventListener("click", closeNav);
 });
+// Autoplay helper (some browsers need a JS play() call)
+document.querySelectorAll("video.autoVid").forEach((v) => {
+  v.muted = true;      // required for autoplay
+  v.playsInline = true;
+
+  const tryPlay = async () => {
+    try { await v.play(); } catch (e) { /* ignore */ }
+  };
+
+  tryPlay();
+
+  // If video pauses (rare), try again
+  v.addEventListener("pause", tryPlay);
+});
 
