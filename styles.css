@@ -288,6 +288,52 @@ input:focus, textarea:focus, select:focus{border-color: rgba(25,211,255,.45)}
 .estCheck{display:flex; gap:10px; align-items:center; font-weight:800; color:var(--muted)}
 .estPrice{margin-top:14px; font-size:44px; font-weight:900}
 .estNotes{margin-top:6px; color:var(--muted); font-weight:800}
+/* --- Instant Estimate layout fixes --- */
+.estTwo{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px;
+  align-items:end;
+}
+
+@media (max-width: 700px){
+  .estTwo{ grid-template-columns: 1fr; }
+}
+
+.estSelect{
+  width:100%;
+  height:48px;              /* keeps selects same height */
+}
+
+/* Add-ons list aligned left (checkbox + label) */
+.estAddonsList{
+  display:grid;
+  gap:12px;
+  margin-top:10px;
+}
+
+.estCheck{
+  display:flex !important;  /* overrides global label { display:grid } */
+  align-items:center;
+  justify-content:flex-start;
+  gap:12px;
+  width:100%;
+  text-align:left;
+  margin:0;
+}
+
+.estCheck input{
+  width:18px;
+  height:18px;
+  margin:0;
+  accent-color: var(--accent2);
+}
+
+.estCheck span{
+  flex:1;
+  color: var(--muted);
+  font-weight: 800;
+}
 
 /* Footer */
 .footer{
