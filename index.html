@@ -78,7 +78,7 @@
         <div class="hero__cta">
           <a class="btn" href="#contact">Get a Quote / Book</a>
           <a class="btn btn--ghost" href="tel:+12145551234">Call / Text (214) 555-1234</a>
-          <a class="btn btn--ghost" href="project.html">Open Project Page</a>
+          <a class="btn btn--ghost" href="project.html">View Packages</a>
         </div>
 
         <div class="hero__badges">
@@ -231,51 +231,58 @@
         <article class="card">
           <h3>Build your estimate</h3>
 
-          <div class="estForm">
-            <label class="estLabel">
-              Vehicle size
-              <select id="estVehicle" class="estSelect">
-                <option value="sedan">Sedan / Coupe</option>
-                <option value="suv">SUV / Crossover</option>
-                <option value="truck">Truck / Large SUV</option>
-              </select>
-            </label>
+        <div class="estForm">
+  <!-- Make the 2 selects line up -->
+  <div class="estTwo">
+    <label class="estLabel">
+      Vehicle size
+      <select id="estVehicle" class="estSelect">
+        <option value="sedan">Sedan / Coupe</option>
+        <option value="suv">SUV / Crossover</option>
+        <option value="truck">Truck / Large SUV</option>
+      </select>
+    </label>
 
-            <label class="estLabel">
-              Package
-              <select id="estPackage" class="estSelect">
-                <option value="exterior">Exterior Refresh</option>
-                <option value="interior">Interior Reset</option>
-                <option value="full" selected>Full Detail</option>
-              </select>
-            </label>
+    <label class="estLabel">
+      Package
+      <select id="estPackage" class="estSelect">
+        <option value="exterior">Exterior Refresh</option>
+        <option value="interior">Interior Reset</option>
+        <option value="full" selected>Full Detail</option>
+      </select>
+    </label>
+  </div>
 
-            <div class="estAddons">
-              <div class="estAddonsTitle">Add-ons</div>
+  <!-- Fix add-ons alignment -->
+  <div class="estAddons">
+    <div class="estAddonsTitle">Add-ons</div>
 
-              <label class="estCheck">
-                <input type="checkbox" id="addonPetHair" />
-                Pet hair removal
-              </label>
+    <div class="estAddonsList">
+      <label class="estCheck">
+        <input type="checkbox" id="addonPetHair" />
+        <span>Pet hair removal</span>
+      </label>
 
-              <label class="estCheck">
-                <input type="checkbox" id="addonExtract" />
-                Shampoo / extraction
-              </label>
+      <label class="estCheck">
+        <input type="checkbox" id="addonExtract" />
+        <span>Shampoo / extraction</span>
+      </label>
 
-              <label class="estCheck">
-                <input type="checkbox" id="addonOdor" />
-                Odor treatment
-              </label>
-            </div>
+      <label class="estCheck">
+        <input type="checkbox" id="addonOdor" />
+        <span>Odor treatment</span>
+      </label>
+    </div>
+  </div>
 
-            <div class="ctaRow">
-              <a class="btn" href="#contact">Book with this estimate</a>
-              <a class="btn btn--ghost" href="sms:+12145551234?&body=Hi!%20I%20used%20your%20Instant%20Estimate.%20Vehicle:%20____%20Package:%20____%20Add-ons:%20____%20Preferred%20time:%20____">
-                Text this estimate
-              </a>
-            </div>
-          </div>
+  <div class="ctaRow">
+    <a class="btn" href="#contact">Book with this estimate</a>
+    <a class="btn btn--ghost" href="sms:+12145551234?&body=Hi!%20I%20used%20your%20Instant%20Estimate.%20Vehicle:%20____%20Package:%20____%20Add-ons:%20____%20Preferred%20time:%20____">
+      Text this estimate
+    </a>
+  </div>
+</div>
+
         </article>
 
         <article class="card">
@@ -473,7 +480,7 @@
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
         <a href="#contact">Book</a>
-        <a href="project.html">Project</a>
+        <a href="project.html" class="btn btn--small">Packages</a>
       </div>
     </div>
   </footer>
